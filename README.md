@@ -34,7 +34,7 @@ chsh -s $(which zsh)
 zsh
 ```
 
-If you want to automatically enter Zsh every time you log in without changing the system’s default shell, you can add the following line to your `~/.bashrc`:
+If you want to automatically enter Zsh every time without changing the system’s default shell, you can add the following line:
 
 ```bash
 nano ~/.bashrc # open ~/.bashrc
@@ -45,20 +45,40 @@ source ~/.bashrc # reload the terminal or run this command
 
 ## Install Oh-My-ZSH
 
+To enhance ZSH experience, we can install Oh-My-ZSH — a popular open-source framework that makes ZSH more powerful and user-friendly. It can help us to customize the shell with themes and also add plugins for features like auto-suggestions and syntax highlighting.
+
+Install it with:
+
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-This installs into `~/.oh-my-zsh/` and generates a `~/.zshrc`.
-
 ## Install Plugins
 
-Clone the following plugins into ~/.oh-my-zsh/custom/plugins/:
+Then we can install plugins to supercharge ZSH experience, and it's highly recommended to install the following Oh-My-ZSH plugins. These plugins improve command-line productivity by adding intelligent suggestions, syntax highlighting, and autocomplete features.
+
+- **autosuggesions plugin**: Shows command suggestions based on your command history as you type.
 
 ```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+- **zsh-syntax-highlighting plugin**: Adds color to your command line input, highlighting valid and invalid commands in real time.
+
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
+
+- **zsh-fast-syntax-highlighting plugin**: A faster implementation of syntax highlighting for large command lines.
+
+```bash
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+```
+
+- **zsh-autocomplete plugin**: Provides real-time autocompletion as you type, including fuzzy matching and suggestions.
+
+```bash
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 ```
 
 ## Enable Plugins in `.zshrc`

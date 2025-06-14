@@ -57,7 +57,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 Then we can install plugins to supercharge ZSH experience, and it's highly recommended to install the following Oh-My-ZSH plugins. These plugins improve command-line productivity by adding intelligent suggestions, syntax highlighting, and autocomplete features.
 
-- **autosuggesions plugin**: Shows command suggestions based on your command history as you type.
+- **zsh-autosuggesions plugin**: Shows command suggestions based on your command history as you type.
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
@@ -83,11 +83,22 @@ git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZS
 
 ## Enable Plugins in `.zshrc`
 
-Open `.zshrc` and find:
+Once the desired plugins are successfully cloned, the next step is to enable them by editing `.zshrc` configuration file. This ensures that ZSH will load these plugins every time a new shell session starts.
 
 ```bash
-plugins=(git)
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+# open `.zshrc`
+nano ~/.zshrc
+
+# find the line which says `plugins=(git)` and replace that line with:
+plugins=(
+ git
+ zsh-autosuggestions
+ zsh-syntax-highlighting
+ fast-syntax-highlighting
+ zsh-autocomplete
+)
+
+# reload your environment to make changes work
 source ~/.zshrc
 ```
 

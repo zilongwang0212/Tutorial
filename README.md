@@ -19,3 +19,65 @@ sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplet
 ```
 
 ⚠️ On shared HPC clusters, you may not have sudo access. In that case, you can request installation from your system administrator. Alternatively, you can **compile and install Zsh into your own `$HOME` directory** without needing root access. For more detailed instructions, refer to the [official Zsh GitHub repository](https://github.com/zsh-users/zsh#installing-zsh).
+
+## Change Your Default Shell to ZSH
+
+If your user has permissions:
+
+```bash
+chsh -s $(which zsh)
+```
+
+⚠️ On many shared clusters, you may not have `chsh` access. In that case, run Zsh manually:
+
+```bash
+zsh
+```
+
+You can also add this to your `.bashrc`:
+
+```bash
+exec zsh
+```
+
+## Install Oh-My-ZSH
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+This installs into `~/.oh-my-zsh/` and generates a `~/.zshrc`.
+
+## Install Plugins
+
+Clone the following plugins into ~/.oh-my-zsh/custom/plugins/:
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+## Enable Plugins in `.zshrc`
+
+Open `.zshrc` and find:
+
+```bash
+plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+source ~/.zshrc
+```
+
+## Enjoy the Experience
+
+Once configured, you'll benefit from:
+
+🚀 Command suggestions based on history
+
+🖍️ Real-time syntax highlighting
+
+⌨️ Tab completion and shortcuts
+
+🧩 Easy theming and customization
+
+

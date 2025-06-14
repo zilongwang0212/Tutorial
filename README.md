@@ -81,7 +81,7 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 ```
 
-## Enable Plugins in .zshrc
+## Enable Plugins 
 
 Once the desired plugins are successfully cloned, the next step is to enable them by editing `.zshrc` configuration file. This ensures that ZSH will load these plugins every time a new shell session starts.
 

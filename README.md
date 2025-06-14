@@ -98,8 +98,24 @@ plugins=(
  zsh-autocomplete
 )
 
+# press `Ctrl+O` to save and `Ctrl+X` to exit
+
 # reload your environment to make changes work
 source ~/.zshrc
+```
+
+## Customize ZSH Theme
+
+After enabling useful plugins, we can also customize the appearance of the terminal by changing the theme. It provides many built-in themes and by default, the theme is set to `robbyrussell`, but we can switch to another one such as `alanpeabody`, `agnoster`, or `bureau`:
+
+```bash
+# open `.zshrc`
+nano ~/.zshrc
+
+# find the line `ZSH_THEME="robbyrussell"` and replace that line with:
+ZSH_THEME="alanpeabody"
+
+# press `Ctrl+O` to save and `Ctrl+X` to exit
 ```
 
 ## Enjoy the Experience

@@ -20,24 +20,27 @@ sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplet
 
 ⚠️ On shared HPC clusters, you may not have sudo access. In that case, you can request installation from your system administrator. Alternatively, you can **compile and install Zsh into your own `$HOME` directory** without needing root access. For more detailed instructions, refer to the [official Zsh GitHub repository](https://github.com/zsh-users/zsh#installing-zsh).
 
-## Change Your Default Shell to ZSH
+## Change Your Default Shell (Bash) to ZSH
 
-If your user has permissions:
+If your user has permissions, you just need to run:
 
 ```bash
 chsh -s $(which zsh)
 ```
 
-⚠️ On many shared clusters, you may not have `chsh` access. In that case, run Zsh manually:
+⚠️ On many shared clusters, you may not have `chsh` access. In that case, run manually after each login:
 
 ```bash
 zsh
 ```
 
-You can also add this to your `.bashrc`:
+If you want to automatically enter Zsh every time you log in without changing the system’s default shell, you can add the following line to your `~/.bashrc`:
 
 ```bash
-exec zsh
+nano ~/.bashrc # open ~/.bashrc
+exec zsh # add it at the end of the file, and do not modify anything inside the >>> conda initialize >>> block
+# press `Ctrl+O` to save and `Ctrl+X` to exit
+source ~/.bashrc # reload the terminal or run this command
 ```
 
 ## Install Oh-My-ZSH

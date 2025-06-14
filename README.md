@@ -108,6 +108,11 @@ source ~/.zshrc
 
 After enabling useful plugins, we can also customize the appearance of the terminal by changing the theme. It provides many built-in themes and by default, the theme is set to `robbyrussell`, but we can switch to another one such as `alanpeabody`, `agnoster`, or `bureau`:
 
+- `robbyrussell`: Default theme. Shows current directory and Git branch. Clean and classic.
+- `alanpeabody`: Displays Git status icons with a minimalist style.
+- `agnoster`: Visually enhanced. Requires Powerline fonts. Shows path, Git, and status.
+- `bureau`: Rich in information. Displays username, path, Git branch, time, and more.
+
 ```bash
 # open `.zshrc`
 nano ~/.zshrc

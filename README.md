@@ -18,7 +18,7 @@ However, if ZSH is **not installed** and you have **sudo permissions**, you can 
 sudo apt install zsh zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete
 ```
 
-⚠️ On shared HPC clusters, you may not have sudo access. In that case, you can request installation from your system administrator. Alternatively, you can **compile and install Zsh into your own `$HOME` directory** without needing root access. For more detailed instructions, refer to the [official Zsh GitHub repository](https://github.com/zsh-users/zsh#installing-zsh).
+⚠️ On shared HPC clusters, you may not have sudo access. In that case, you can request installation from your system administrator. Alternatively, you can **compile and install Zsh into your own `$HOME` directory** without needing root access. For more detailed instructions, refer to [official Zsh GitHub repository](https://github.com/zsh-users/zsh#installing-zsh).
 
 ## Change Your Default Shell (Bash) to ZSH
 
